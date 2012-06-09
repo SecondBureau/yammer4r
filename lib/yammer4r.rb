@@ -23,4 +23,6 @@ require 'yammer/message_list'
 require 'yammer/user'
 require 'yammer/attributable'
 require 'yammer/topic'
+require 'yammer/group'
+require 'yammer/group_list'
 

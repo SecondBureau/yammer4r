@@ -18,6 +18,21 @@ module Yammer
       end
         Yammer::MessageList.new(ml, older_available, self)
     end
+    
+    def groups(action = :all, params = {})
+      params.merge!(:resource => :groups)
+      params.merge!(:action => action) unless action == :all
+
+      parsed_response = JSON.parse(yammer_request(:get, params).body)
+      
+      #puts parsed_response.inspect
+      
+      ml = parsed_response.map do |m|
+         mash(m)
+      end
+      Yammer::GroupList.new(ml, self)
+    end
+    
 
     # search everyting
     def search(string, params = {})

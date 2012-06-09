@@ -1,12 +1,12 @@
 Gem::Specification.new do |s|
   s.name    = 'yammer4r'
-  s.version = '0.2.0'
-  s.date    = '2012-05-16'
+  s.version = '0.3.0'
+  s.date    = '2012-06-09'
 
   s.summary = "Yammer access for ruby"
   s.description = "Yammer4R provides an object based API to query or update your Yammer account via pure Ruby.  It hides the ugly HTTP/REST code from your code."
 
-  s.authors  = ['Jim Patterson', 'Jason Stewart', 'Peter Moran']
+  s.authors  = ['Jim Patterson', 'Jason Stewart', 'Peter Moran', 'Gilles Crofils']
   s.email    = 'workingpeter@gmail.com'
   s.homepage = 'http://github.com/pmoran/yammer4r'
 
@@ -22,6 +22,8 @@ Gem::Specification.new do |s|
                lib/yammer/message.rb
                lib/yammer/message_list.rb
                lib/yammer/user.rb
+               lib/yammer/group.rb
+               lib/yammer/group_list.rb
                lib/ext/core_ext.rb
                spec/spec_helper.rb
                spec/yammer/client_spec.rb)
